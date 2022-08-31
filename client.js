@@ -1,4 +1,5 @@
 const net = require("net");
+
 const connect = function() {
   const conn = net.createConnection({
     host: "localhost",
@@ -9,6 +10,9 @@ const connect = function() {
   });
   conn.write("Name: HPB");
   conn.write("Move: up");
+  setTimeout(() => {
+    conn.write("Move: up");
+  }, 1000);
   conn.on("data", message => {
     console.log("data:", message);
   });
