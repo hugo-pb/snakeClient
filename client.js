@@ -9,10 +9,6 @@ const connect = function() {
     console.log("GAME ON! ");
   });
   conn.write("Name: HPB");
-  conn.write("Move: up");
-  setTimeout(() => {
-    conn.write("Move: up");
-  }, 1000);
   conn.on("data", message => {
     console.log("data:", message);
   });
