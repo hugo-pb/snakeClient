@@ -7,6 +7,7 @@ const connect = function() {
   conn.on("connect", () => {
     console.log("GAME ON! ");
   });
+  conn.write("Name: HPB");
   conn.on("data", message => {
     console.log("data:", message);
   });
