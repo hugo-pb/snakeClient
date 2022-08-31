@@ -1,9 +1,9 @@
 const net = require("net");
-
+const { host, port } = require("./conststant");
 const connect = function() {
   const conn = net.createConnection({
-    host: "localhost",
-    port: 50541
+    host,
+    port
   });
   conn.on("connect", () => {
     console.log("GAME ON! ");
