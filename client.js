@@ -4,6 +4,9 @@ const connect = function() {
     host: "localhost",
     port: 50541
   });
+  conn.on("connect", () => {
+    console.log("GAME ON! ");
+  });
   conn.on("data", message => {
     console.log("data:", message);
   });
