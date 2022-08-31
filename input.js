@@ -20,6 +20,13 @@ const handleUserInput = function(data) {
   if (data === "d") {
     connection.write("Move: right");
   }
+
+  if (data === "p") {
+    connection.write("Say: I AM FAST 😎");
+  }
+  if (data === "l") {
+    connection.write("Ssssss... ");
+  }
 };
 const setupInput = function(conn) {
   connection = conn;
